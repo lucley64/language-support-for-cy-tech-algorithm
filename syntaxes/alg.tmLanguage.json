@@ -41,7 +41,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.alg",
-					"match": "\\b(Si|Alors|Sinon|FinSi|Selon|Cas|FinSelon|Pour|FinPour|TantQue|FinTantQue|Debut|Fin|Variables)\\b"
+					"match": "\\b(Si|Alors|Sinon|FinSi|Selon|Cas|FinSelon|Pour|FinPour|TantQue|FinTantQue|Debut|Fin|Variables|Faire)\\b"
 				}
 			]
 		},
