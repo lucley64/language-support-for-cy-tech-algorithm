@@ -7,14 +7,43 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#AlgorithmConditions"
+		},
+		{
+			"include": "#AlgoNames"
+		},
+		{
+			"include": "#AlgoBools"
+		},
+		{
+			"include": "#AlgoNums"
+		},
+		{
+			"include": "#AlgoTypes"
+		},
+		{
+			"include": "#AlgoFoncProc"
+		},
+		{
+			"include": "#AlgoChars"
+		},
+		{
+			"include": "#AlgoOper"
+		},
+		{
+			"include": "#AlgoVars"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.alg",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.alg",
+					"match": "\\b(Si|Alors|Sinon|FinSi|Selon|Cas|FinSelon|Pour|FinPour|TantQue|FinTantQue|Debut|Fin|Variables)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.alg",
@@ -26,7 +55,114 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"AlgoVars": {
+			"patterns": [
+				{
+					"match": "\\w+",
+					"name": "variable.name"
+				}
+			]
+		},
+		"AlgoChars": {
+			"patterns": [
+				{
+					"name": "string.quoted.single",
+					"match": "'.'"
+				}
+			]
+		},
+		"AlgorithmConditions": {
+			"patterns": [
+				{
+					"match": "\\b(Preconditions:|Postconditions:)\\s(.*)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.alg"
+						},
+						"2": {
+							"name": "string.unquoted"
+						}
+					}
+				}
+			]
+		},
+		"AlgoNames": {
+			"patterns": [
+				{
+					"match": "\\b(Algorithme|Enregistrement)\\s(.*)",
+					"captures": {
+						"1": {
+							"name": "storage.type"
+						},
+						"2": {
+							"name": "entity.name.type"
+						}
+					}
+				}
+			]
+		},
+		"AlgoBools": {
+			"patterns": [
+				{
+					"match": "((?i:VRAI|FAUX))|((?i:ET|OU|NON))",
+					"captures": {
+						"1": {
+							"name": "constant.language"
+						},
+						"2": {
+							"name": "keyword.operator"
+						}
+					}
+				}
+			]
+		},
+		"AlgoOper":{
+			"patterns": [
+				{
+					"match": "(\\+|-|/|\\*|div|mod|←|:=|=|≤|<|>|≥|≠)",
+					"name": "keyword.operator"
+				}
+			]
+		},
+		"AlgoNums": {
+			"patterns": [
+				{
+					"match": "[0-9]",
+					"name": "constant.numeric"
+				}
+			]
+		},
+		"AlgoTypes": {
+			"patterns": [
+				{
+					"match": "(Entier|Caractere|Reel|Booleen|Chaine)",
+					"name": "storage.type"
+				}
+			]
+		},
+		"AlgoFoncProc": {
+			"patterns": [
+				{
+					"match": "(?mx)(Fonction\\s|Procedure\\s)?(\\w*)\\((.*)\\)",
+					"captures": {
+						"1": {
+							"name": "storage.type"
+						},
+						"2": {
+							"name": "entity.name.function"
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "$self"
+								}
+							]
+						}
+					}
+				}
+			]
 		}
 	},
-	"scopeName": ""
+	"scopeName": "source.alg"
 }

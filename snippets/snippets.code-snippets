@@ -1,0 +1,16 @@
+{
+	"algorithme": {
+        "prefix": "Algorithme",
+        "body": [
+            "Preconditions: ${1:precond}",
+            "Postconditions: ${2:postcond}",
+            "Algorithme ${3:nom}",
+            "Variables",
+            "\t$4",
+            "Debut",
+            "\t$0",
+            "Fin"
+        ],
+        "description": "Corp de l'algorithme"
+    }
+}

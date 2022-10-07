@@ -1,5 +1,6 @@
 {
   "name": "language-support-for-cy-tech-algorithm",
+  "publisher": "moi",
   "displayName": "Language support for cy tech algorithm",
   "description": "",
   "version": "0.0.1",
@@ -7,19 +8,35 @@
     "vscode": "^1.72.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
-    "languages": [{
-      "id": "alg",
-      "aliases": ["cy algo", "alg"],
-      "extensions": [".alg"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "alg",
-      "scopeName": "",
-      "path": "./syntaxes/alg.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "alg",
+        "aliases": [
+          "cy algo",
+          "alg"
+        ],
+        "extensions": [
+          ".alg"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "alg",
+        "scopeName": "source.alg",
+        "path": "./syntaxes/alg.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "alg",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
   }
 }
