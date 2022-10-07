@@ -90,7 +90,7 @@
 		"AlgoNames": {
 			"patterns": [
 				{
-					"match": "\\b(Algorithme|Enregistrement)\\s(.*)",
+					"match": "\\b(Algorithme|Enregistrement|FinEnregistrement)\\s(.*)",
 					"captures": {
 						"1": {
 							"name": "storage.type"

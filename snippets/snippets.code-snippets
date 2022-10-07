@@ -103,5 +103,15 @@
             "Fin"
         ],
         "description": "Corp de fonction"
+    },
+    "Enregistrement":{
+        "prefix": "Enregistrement",
+        "body": [
+            "Enregistrement ${1:Nom}",
+            "\t${2:var}:${3:type}",
+            "${4:\tvar:type}",
+            "FinEnregistrement"
+        ],
+        "description": "Representation de donnees composees"
     }
 }
