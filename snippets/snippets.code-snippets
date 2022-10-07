@@ -1,5 +1,5 @@
 {
-	"Algorithme": {
+    "Algorithme": {
         "prefix": "Algorithme",
         "body": [
             "Preconditions: ${1:precond}",
@@ -13,7 +13,7 @@
         ],
         "description": "Corp de l'algorithme"
     },
-    "Si, Alors":{
+    "Si, Alors": {
         "prefix": "Si",
         "body": [
             "Si ${1:condition}",
@@ -57,7 +57,7 @@
         ],
         "description": "Structure de controle iterative bornee"
     },
-    "Tant Que":{
+    "Tant Que": {
         "prefix": "TantQue",
         "body": [
             "TantQue ${1:condition}",
@@ -67,7 +67,7 @@
         ],
         "description": "Structure de controle iterative non bornee"
     },
-    "Faire Tant Que":{
+    "Faire Tant Que": {
         "prefix": "Faire",
         "body": [
             "Faire",
@@ -76,7 +76,7 @@
         ],
         "description": "Structure de controle iterative non bornee"
     },
-    "Procedure":{
+    "Procedure": {
         "prefix": "Procedure",
         "body": [
             "Preconditions: ${1:precond}",
@@ -90,7 +90,7 @@
         ],
         "description": "Corp de precedure"
     },
-    "Fonction":{
+    "Fonction": {
         "prefix": "Fonction",
         "body": [
             "Preconditions: ${1:precond}",
@@ -104,7 +104,7 @@
         ],
         "description": "Corp de fonction"
     },
-    "Enregistrement":{
+    "Enregistrement": {
         "prefix": "Enregistrement",
         "body": [
             "Enregistrement ${1:Nom}",
@@ -113,5 +113,13 @@
             "FinEnregistrement"
         ],
         "description": "Representation de donnees composees"
+    },
+    "Block de commentaire":{
+        "prefix": "/*",
+        "body": [
+            "/*",
+            "\t$0",
+            "*/"
+        ]
     }
 }

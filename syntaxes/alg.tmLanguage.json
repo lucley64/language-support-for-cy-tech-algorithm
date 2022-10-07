@@ -6,6 +6,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#AlgoComments"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -42,6 +45,19 @@
 				{
 					"name": "keyword.control.alg",
 					"match": "\\b(Si|Alors|Sinon|FinSi|Selon|Cas|FinSelon|Pour|FinPour|TantQue|FinTantQue|Debut|Fin|Variables|Faire)\\b"
+				}
+			]
+		},
+		"AlgoComments": {
+			"patterns": [
+				{
+					"match": "//.*$",
+					"name": "comment.line.double-slash"
+				},
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.block"
 				}
 			]
 		},
@@ -117,7 +133,7 @@
 				}
 			]
 		},
-		"AlgoOper":{
+		"AlgoOper": {
 			"patterns": [
 				{
 					"match": "(\\+|-|/|\\*|div|mod|←|:=|=|≤|<|>|≥|≠)",
